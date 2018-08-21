@@ -41,11 +41,11 @@ class ViewController: UIViewController {
 
 
     @IBAction func registerBtnPressed(_ sender: Any) {
-        SVProgressHUD.show()
-        let registrationForm = RegistrationForm(email: emailTF.text!, password: passwordTF.text!)
-        authService.register(with: registrationForm) { (user) in
-            SVProgressHUD.dismiss()
-        }
+//        SVProgressHUD.show()
+//        let registrationForm = RegistrationForm(email: emailTF.text!, password: passwordTF.text!)
+//        authService.register(with: registrationForm) { (user) in
+//            SVProgressHUD.dismiss()
+//        }
     }
 
     @IBAction func addObject() {
@@ -61,6 +61,6 @@ class ViewController: UIViewController {
 
     }
 
-    let authService = AuthService()
+    let authService = AuthDM()
 }
 

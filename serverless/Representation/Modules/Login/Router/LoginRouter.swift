@@ -9,10 +9,13 @@
 import UIKit
 
 protocol LoginRouterProtocol {
-
+    func showMainController()
 }
 
 class LoginRouter: BaseRouter, LoginRouterProtocol {
-
-
+    func showMainController() {
+//        guard let vc = vc(withType: <#T##T.Type#>, fromStoryboard: .main) else {
+//            <#statements#>
+//        }
+    }
 }

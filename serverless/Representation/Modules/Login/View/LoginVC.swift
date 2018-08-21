@@ -26,7 +26,9 @@ class LoginVC : BaseVC {
 
     @IBAction func forgotPasswordBtnPressed(_ sender: Any) {
     }
+
     @IBAction func logInBtnPressed(_ sender: Any) {
+        viewModel?.login(with: emailTF.text, password: passwordTF.text)
     }
     // MARK: - Private
     
@@ -35,5 +37,10 @@ class LoginVC : BaseVC {
 }
 
 extension LoginVC: LoginVMDelegate {
+
+    func didLoginSuccess() {
+        
+    }
+
 	
 }

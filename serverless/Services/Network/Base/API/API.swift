@@ -9,7 +9,7 @@
 import Foundation
 
 
-typealias FailureCallback = (_ errorText: String?) -> ()
+typealias FailureCallback = (_ error: Error?) -> ()
 typealias SuccessCallback = () -> ()
 typealias SuccessWithItemCallback<A> = (A) -> ()
 typealias SuccessWithItemsCallback<A> = ([A]) -> ()

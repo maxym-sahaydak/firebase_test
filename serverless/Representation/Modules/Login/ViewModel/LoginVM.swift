@@ -7,11 +7,11 @@
 //
 
 protocol LoginVMProtocol {
-    
+    func login(with email: String?, password: String?)
 }
 
-protocol LoginVMDelegate: class { 
-
+protocol LoginVMDelegate: class, BaseVCMessagesProtocol, BaseVCSpinnerProtocol {
+    func didLoginSuccess()
 }
 
 class LoginVM: LoginVMProtocol {
@@ -21,4 +21,24 @@ class LoginVM: LoginVMProtocol {
 	init(withDelegate delegate: LoginVMDelegate) {
         self.delegate = delegate
     }
+
+    //MARK: - LoginVMProtocol
+
+    func login(with email: String?, password: String?) {
+        delegate?.spinnerControl?.show()
+        guard let email = email, let password = password else { return }
+        let loginForm = LoginForm(email: email, password: password)
+        authDM.login(with: loginForm, success: { [weak self] (user) in
+            self?.delegate?.spinnerControl?.hide()
+            self?.delegate?.didLoginSuccess()
+            self?.delegate?.infoMessage("Succes", message: "Did login success!!!")
+        }) { [weak self] (error) in
+            self?.delegate?.spinnerControl?.hide()
+            self?.delegate?.errorMessage(error?.localizedDescription)
+        }
+    }
+
+    //MARK: - Private
+
+    let authDM = AuthDM()
 }
