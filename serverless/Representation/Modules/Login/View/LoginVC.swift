@@ -17,6 +17,17 @@ class LoginVC : BaseVC {
         viewModel = LoginVM(withDelegate: self)
     }
 
+    //MARK: - Outlets
+
+    @IBOutlet weak var emailTF: UITextField!
+    @IBOutlet weak var passwordTF: UITextField!
+
+    //MARK: - IBAction
+
+    @IBAction func forgotPasswordBtnPressed(_ sender: Any) {
+    }
+    @IBAction func logInBtnPressed(_ sender: Any) {
+    }
     // MARK: - Private
     
     private var router: LoginRouterProtocol?

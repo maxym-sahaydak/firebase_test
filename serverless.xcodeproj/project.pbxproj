@@ -26,6 +26,8 @@
 		377795E2212AB9BF0018B3EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 377795E0212AB9BF0018B3EA /* LaunchScreen.storyboard */; };
 		377795ED212AB9C00018B3EA /* serverlessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377795EC212AB9C00018B3EA /* serverlessTests.swift */; };
 		377795F8212AB9C00018B3EA /* serverlessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377795F7212AB9C00018B3EA /* serverlessUITests.swift */; };
+		37AABE02212C361D0099162E /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AABE01212C361D0099162E /* BaseVC.swift */; };
+		37AABE04212C363C0099162E /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AABE03212C363C0099162E /* BaseRouter.swift */; };
 		5177C0329A0266C96486C1BB /* RegistrationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E746842BCF04790EB1C6F0D4 /* RegistrationRouter.swift */; };
 		87EA3651072A3E6C949649C1 /* RegistrationVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F92A668CAA0028122F272A /* RegistrationVM.swift */; };
 		B1274826B59AAD377B3F0195 /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC285AE23ED504440BB1988 /* LoginVM.swift */; };
@@ -81,6 +83,8 @@
 		377795F3212AB9C00018B3EA /* serverlessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = serverlessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		377795F7212AB9C00018B3EA /* serverlessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = serverlessUITests.swift; sourceTree = "<group>"; };
 		377795F9212AB9C00018B3EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37AABE01212C361D0099162E /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		37AABE03212C363C0099162E /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		3C582E1C2DD33A4914BC1441 /* LoginRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		55F92A668CAA0028122F272A /* RegistrationVM.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RegistrationVM.swift; sourceTree = "<group>"; };
 		73611FBEA41EE8E2954B0A3E /* Pods_serverless.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_serverless.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,7 +132,6 @@
 			children = (
 				2AC285AE23ED504440BB1988 /* LoginVM.swift */,
 			);
-			name = ViewModel;
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
@@ -139,7 +142,6 @@
 				9D90DED75816BC2B2C36289F /* Router */,
 				08242FA80CC9AE319B44DE26 /* ViewModel */,
 			);
-			name = Login;
 			path = Login;
 			sourceTree = "<group>";
 		};
@@ -148,7 +150,6 @@
 			children = (
 				C61303C805EC5B9C27CC9F50 /* LoginVC.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -156,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				373FF3DE212C209F004923AD /* Storyboards */,
+				37AABE00212C36070099162E /* Base */,
 				ED4D05C76E01C7A480A77D58 /* Modules */,
 			);
 			path = Representation;
@@ -313,6 +315,15 @@
 			path = serverlessUITests;
 			sourceTree = "<group>";
 		};
+		37AABE00212C36070099162E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				37AABE01212C361D0099162E /* BaseVC.swift */,
+				37AABE03212C363C0099162E /* BaseRouter.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		516E43982E1F6C5BE6AF3F42 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -355,7 +366,6 @@
 			children = (
 				3C582E1C2DD33A4914BC1441 /* LoginRouter.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -587,6 +597,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-serverless/Pods-serverless-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -595,6 +606,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -624,6 +636,8 @@
 				376C2F24212AEF6200336122 /* LoginForm.swift in Sources */,
 				271AB7FD327AC6DBBB3B9B2D /* RegistrationVC.swift in Sources */,
 				5177C0329A0266C96486C1BB /* RegistrationRouter.swift in Sources */,
+				37AABE04212C363C0099162E /* BaseRouter.swift in Sources */,
+				37AABE02212C361D0099162E /* BaseVC.swift in Sources */,
 				87EA3651072A3E6C949649C1 /* RegistrationVM.swift in Sources */,
 				FCB22347545B35B9B3BC5560 /* LoginVC.swift in Sources */,
 				D5FC7689E2683195D621ADC1 /* LoginRouter.swift in Sources */,

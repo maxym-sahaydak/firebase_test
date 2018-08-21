@@ -9,6 +9,7 @@ target 'serverless' do
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
   pod 'SVProgressHUD'
+  pod 'IQKeyboardManagerSwift'
   # Pods for serverless
 
   target 'serverlessTests' do
