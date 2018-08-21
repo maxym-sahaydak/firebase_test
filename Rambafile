@@ -1,0 +1,26 @@
+### Headers settings
+company: TechMagic
+
+### Xcode project settings
+project_name: serverless
+xcodeproj_path: serverless.xcodeproj
+
+### Code generation settings section
+# The main project target name
+project_target: serverless
+
+# The file path for new modules
+project_file_path: serverless/Representation/Modules
+
+# The Xcode group path to new modules
+project_group_path: serverless/Representation/Modules
+
+### Dependencies settings section
+podfile_path: Podfile
+
+### Templates
+templates:
+#- {name: local_template_name, local: 'absolute/file/path'}
+#- {name: remote_template_name, git: 'https://github.com/igrekde/remote_template'}
+#- {name: catalog_template_name}
+- {name: tm_mvvm, git: 'https://github.com/nikitapankiv/Generamba_Templates/'}

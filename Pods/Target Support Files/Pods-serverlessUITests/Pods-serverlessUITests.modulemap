@@ -1,0 +1,6 @@
+framework module Pods_serverlessUITests {
+  umbrella header "Pods-serverlessUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
