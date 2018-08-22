@@ -17,6 +17,22 @@ class RegistrationVC : BaseVC {
         viewModel = RegistrationVM(withDelegate: self)
     }
 
+    //MARK: -  Outlet
+
+    @IBOutlet weak var emailTF: UITextField!
+    @IBOutlet weak var passwordTF: UITextField!
+    @IBOutlet weak var confirmPassTF: UITextField!
+
+
+    //MARK: - Action
+
+    @IBAction func backToLoginPressed(_ sender: Any) {
+        router?.close()
+    }
+
+    @IBAction func registerBtnPressed(_ sender: Any) {
+        viewModel?.register(with: emailTF.text ?? "", password: passwordTF.text ?? "", confirmPassword: confirmPassTF.text ?? "")
+    }
     // MARK: - Private
     
     private var router: RegistrationRouterProtocol?
@@ -24,5 +40,8 @@ class RegistrationVC : BaseVC {
 }
 
 extension RegistrationVC: RegistrationVMDelegate {
-	
+
+    func didRegisterSuccess() {
+        router?.openMainScreen()
+    }
 }

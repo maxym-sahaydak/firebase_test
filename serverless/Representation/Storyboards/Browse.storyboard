@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nT1-XH-kgw">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.9"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Browse-->
+        <scene sceneID="FXe-ul-SLc">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="nT1-XH-kgw" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Browse" id="HTz-Rf-7Nn"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="c2e-7O-Scl">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="eXk-bq-y2E" kind="relationship" relationship="rootViewController" id="CDk-k0-iLs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jPH-eZ-fCz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-106" y="206"/>
+        </scene>
+        <!--BrowseVC-->
+        <scene sceneID="ccv-J8-GjG">
+            <objects>
+                <viewController storyboardIdentifier="BrowseVC" id="eXk-bq-y2E" customClass="BrowseVC" customModule="serverless" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hVp-Id-yQn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.36078431370000003" green="0.3294117647" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="Iaj-GU-lAg"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="AfR-mI-h3h"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bio-jc-jnX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="641" y="206"/>
+        </scene>
+    </scenes>
+</document>

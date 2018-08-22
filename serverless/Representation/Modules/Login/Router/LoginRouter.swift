@@ -10,12 +10,24 @@ import UIKit
 
 protocol LoginRouterProtocol {
     func showMainController()
+    func openResetPass()
+    func openRegistration()
 }
 
 class LoginRouter: BaseRouter, LoginRouterProtocol {
+
     func showMainController() {
-//        guard let vc = vc(withType: <#T##T.Type#>, fromStoryboard: .main) else {
-//            <#statements#>
-//        }
+        guard let vc = vc(withType: TMTabBarVC.self, fromStoryboard: .main) else { return }
+        open(vc)
+    }
+
+    func openResetPass() {
+        guard let vc = vc(withType: ResetPasswordVC.self, fromStoryboard: .onboarding) else { return }
+        open(vc)
+    }
+
+    func openRegistration() {
+        guard let vc = vc(withType: RegistrationVC.self, fromStoryboard: .onboarding) else { return }
+        open(vc)
     }
 }

@@ -25,11 +25,17 @@ class LoginVC : BaseVC {
     //MARK: - IBAction
 
     @IBAction func forgotPasswordBtnPressed(_ sender: Any) {
+        router?.openResetPass()
     }
 
     @IBAction func logInBtnPressed(_ sender: Any) {
         viewModel?.login(with: emailTF.text, password: passwordTF.text)
     }
+
+    @IBAction func registerBtnPressed(_ sender: Any) {
+        router?.openRegistration()
+    }
+
     // MARK: - Private
     
     private var router: LoginRouterProtocol?
@@ -39,7 +45,7 @@ class LoginVC : BaseVC {
 extension LoginVC: LoginVMDelegate {
 
     func didLoginSuccess() {
-        
+        router?.showMainController()
     }
 
 	

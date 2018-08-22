@@ -8,13 +8,24 @@
 
 import Foundation
 
-protocol BaseForm {
+class BaseForm: BaseFormProtocol {
+
+    var validationDM: ValidationDMProtocol?
+
+    init() {
+    self.validationDM = ValidationDM()
+    }
+
+}
+
+protocol BaseFormProtocol {
     func params() -> [String: Any]
     func query() -> String
 }
 
-extension BaseForm {
+extension BaseFormProtocol {
 
+    
     func params() -> [String: Any] {
         return [:]
     }
