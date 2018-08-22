@@ -13,6 +13,7 @@ protocol AuthProtocol {
     func register(with registratioForm: RegistrationForm, success: @escaping SuccessWithItemCallback<User>, failure: @escaping FailureCallback)
     func login(with loginForm: LoginForm, success: @escaping SuccessWithItemCallback<User>, failure: @escaping FailureCallback)
     func logOut(completion: @escaping SuccessCallback)
+    func isLoggedIn() -> Bool
 }
 
 final class AuthDM: AuthProtocol {
@@ -35,6 +36,10 @@ final class AuthDM: AuthProtocol {
 
     func logOut(completion: @escaping SuccessCallback) {
 
+    }
+
+    func isLoggedIn() -> Bool {
+        return Auth.auth().currentUser != nil
     }
 
 }

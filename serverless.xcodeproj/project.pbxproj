@@ -36,6 +36,11 @@
 		37AABE11212CD4A30099162E /* Browse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37AABE10212CD4A30099162E /* Browse.storyboard */; };
 		37AABE13212D60000099162E /* FormValidationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AABE12212D60000099162E /* FormValidationProtocol.swift */; };
 		37AABE18212D636D0099162E /* ValidationDM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AABE17212D636D0099162E /* ValidationDM.swift */; };
+		37AABE1B212D8A2C0099162E /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AABE1A212D8A2C0099162E /* PinterestLayout.swift */; };
+		37AABE1D212D8A660099162E /* Photos.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37AABE1C212D8A650099162E /* Photos.xcassets */; };
+		37AABE20212D8A850099162E /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AABE1F212D8A850099162E /* Photo.swift */; };
+		37AABE23212D8B060099162E /* AnnotatedPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AABE22212D8B060099162E /* AnnotatedPhotoCell.swift */; };
+		37AABE25212D8EB50099162E /* Photos.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37AABE24212D8EB50099162E /* Photos.plist */; };
 		39D9BA49D16592CB8A52EEF6 /* TMTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F3380D61FB0023D057364D /* TMTabBarVC.swift */; };
 		428FBEADAB6B1C3711D0B293 /* BrowseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95E434995BB2919402FABBA /* BrowseRouter.swift */; };
 		4A27D59DB95925532EC2A801 /* ResetPasswordVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C99EA6E74F8F509EF537D01 /* ResetPasswordVM.swift */; };
@@ -114,6 +119,11 @@
 		37AABE10212CD4A30099162E /* Browse.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Browse.storyboard; sourceTree = "<group>"; };
 		37AABE12212D60000099162E /* FormValidationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormValidationProtocol.swift; sourceTree = "<group>"; };
 		37AABE17212D636D0099162E /* ValidationDM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationDM.swift; sourceTree = "<group>"; };
+		37AABE1A212D8A2C0099162E /* PinterestLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
+		37AABE1C212D8A650099162E /* Photos.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Photos.xcassets; sourceTree = "<group>"; };
+		37AABE1F212D8A850099162E /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		37AABE22212D8B060099162E /* AnnotatedPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotatedPhotoCell.swift; sourceTree = "<group>"; };
+		37AABE24212D8EB50099162E /* Photos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Photos.plist; sourceTree = "<group>"; };
 		3C582E1C2DD33A4914BC1441 /* LoginRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		4C1BFF1ED61E77F04F531093 /* ResetPasswordRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ResetPasswordRouter.swift; sourceTree = "<group>"; };
 		4E5BCD4A444AE422E676B0A3 /* TMTabBarRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TMTabBarRouter.swift; sourceTree = "<group>"; };
@@ -194,6 +204,7 @@
 		276E61A685A46E3BB94B5D5A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				37AABE19212D8A2C0099162E /* Layouts */,
 				C61303C805EC5B9C27CC9F50 /* LoginVC.swift */,
 			);
 			path = View;
@@ -344,11 +355,14 @@
 		377795D3212AB9BF0018B3EA /* serverless */ = {
 			isa = PBXGroup;
 			children = (
+				37AABE1E212D8A740099162E /* Model */,
 				37AABE14212D61A10099162E /* Support */,
 				373FF3DD212C2088004923AD /* Representation */,
 				376C2F1A212AD6A500336122 /* Application */,
 				376C2F10212ACE9800336122 /* Services */,
 				377795D6212AB9BF0018B3EA /* ViewController.swift */,
+				37AABE24212D8EB50099162E /* Photos.plist */,
+				37AABE1C212D8A650099162E /* Photos.xcassets */,
 				377795DE212AB9BF0018B3EA /* Assets.xcassets */,
 				377795DB212AB9BF0018B3EA /* serverless.xcdatamodeld */,
 				376C2F29212B1F7200336122 /* SupportingFiles */,
@@ -431,6 +445,30 @@
 				37AABE17212D636D0099162E /* ValidationDM.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		37AABE19212D8A2C0099162E /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				37AABE1A212D8A2C0099162E /* PinterestLayout.swift */,
+			);
+			path = Layouts;
+			sourceTree = "<group>";
+		};
+		37AABE1E212D8A740099162E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				37AABE1F212D8A850099162E /* Photo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		37AABE21212D8B060099162E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				37AABE22212D8B060099162E /* AnnotatedPhotoCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		4242FF8783F22BD5304CD98F /* View */ = {
@@ -613,6 +651,7 @@
 		EBD1E33D168EA3D11B652E82 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				37AABE21212D8B060099162E /* Views */,
 				0C952C71ECDA1FA3287781CE /* BrowseVC.swift */,
 			);
 			path = View;
@@ -745,7 +784,9 @@
 				37AABE11212CD4A30099162E /* Browse.storyboard in Resources */,
 				377795E2212AB9BF0018B3EA /* LaunchScreen.storyboard in Resources */,
 				373FF3E2212C2134004923AD /* Onboarding.storyboard in Resources */,
+				37AABE25212D8EB50099162E /* Photos.plist in Resources */,
 				376C2F0F212AC10B00336122 /* GoogleService-Info.plist in Resources */,
+				37AABE1D212D8A660099162E /* Photos.xcassets in Resources */,
 				377795DF212AB9BF0018B3EA /* Assets.xcassets in Resources */,
 				377795DA212AB9BF0018B3EA /* Main.storyboard in Resources */,
 			);
@@ -863,6 +904,7 @@
 				376C2F28212AF7D600336122 /* RegistrationForm.swift in Sources */,
 				377795DD212AB9BF0018B3EA /* serverless.xcdatamodeld in Sources */,
 				376C2F26212AF78800336122 /* AuthDM.swift in Sources */,
+				37AABE20212D8A850099162E /* Photo.swift in Sources */,
 				377795D5212AB9BF0018B3EA /* AppDelegate.swift in Sources */,
 				376C2F21212AEB5300336122 /* RegistrationOperation.swift in Sources */,
 				376C2F1D212AD6CB00336122 /* AsyncOperation.swift in Sources */,
@@ -875,6 +917,7 @@
 				37AABE04212C363C0099162E /* BaseRouter.swift in Sources */,
 				37AABE02212C361D0099162E /* BaseVC.swift in Sources */,
 				87EA3651072A3E6C949649C1 /* RegistrationVM.swift in Sources */,
+				37AABE23212D8B060099162E /* AnnotatedPhotoCell.swift in Sources */,
 				37AABE18212D636D0099162E /* ValidationDM.swift in Sources */,
 				37AABE0E212C6F5D0099162E /* BasseVC+Messages.swift in Sources */,
 				FCB22347545B35B9B3BC5560 /* LoginVC.swift in Sources */,
@@ -893,6 +936,7 @@
 				7FCB3E4CD9127971207F2F53 /* SettingsVM.swift in Sources */,
 				6D4335F4FC9604AD7AD04DC5 /* ResetPasswordVC.swift in Sources */,
 				1D4B036C50576407D0338359 /* ResetPasswordRouter.swift in Sources */,
+				37AABE1B212D8A2C0099162E /* PinterestLayout.swift in Sources */,
 				4A27D59DB95925532EC2A801 /* ResetPasswordVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1069,6 +1113,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4PLX6LNW2B;
 				INFOPLIST_FILE = "$(SRCROOT)/serverless/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.serverless.techmagic.in;
@@ -1084,6 +1129,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4PLX6LNW2B;
 				INFOPLIST_FILE = "$(SRCROOT)/serverless/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.serverless.techmagic.in;

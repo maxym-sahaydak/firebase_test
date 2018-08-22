@@ -15,6 +15,10 @@ class LoginVC : BaseVC {
         
         router = LoginRouter(withVC: self)
         viewModel = LoginVM(withDelegate: self)
+
+        if viewModel?.isUserLareadyLoggedIn() ?? false {
+            router?.showMainController()
+        }
     }
 
     //MARK: - Outlets

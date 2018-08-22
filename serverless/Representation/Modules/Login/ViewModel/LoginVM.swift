@@ -8,6 +8,7 @@
 
 protocol LoginVMProtocol {
     func login(with email: String?, password: String?)
+    func isUserLareadyLoggedIn() -> Bool
 }
 
 protocol LoginVMDelegate: class, BaseVCMessagesProtocol, BaseVCSpinnerProtocol {
@@ -38,7 +39,11 @@ class LoginVM: LoginVMProtocol {
         }
     }
 
+    func isUserLareadyLoggedIn() -> Bool {
+        return authDM.isLoggedIn()
+    }
+
     //MARK: - Private
 
-    let authDM = AuthDM()
+    let authDM: AuthProtocol = AuthDM()
 }
