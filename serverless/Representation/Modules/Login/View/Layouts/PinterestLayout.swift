@@ -60,6 +60,11 @@ class PinterestLayout: UICollectionViewLayout {
   override var collectionViewContentSize: CGSize {
     return CGSize(width: contentWidth, height: contentHeight)
   }
+
+    override func invalidateLayout() {
+        cache.removeAll()
+        super.invalidateLayout()
+    }
   
   override func prepare() {
     // 1. Only calculate once

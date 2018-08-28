@@ -56,9 +56,6 @@ class ViewController: UIViewController {
         ref.setValue(item.json) { (error, dbRef) in
 
         }
-
-
-
     }
 
     let authService = AuthDM()

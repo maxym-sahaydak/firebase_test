@@ -92,12 +92,28 @@
                                     <outlet property="delegate" destination="eXk-bq-y2E" id="44d-LN-IKt"/>
                                 </connections>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0a-RV-gga">
+                                <rect key="frame" x="307" y="550" width="44" height="44"/>
+                                <color key="backgroundColor" red="0.13725490200000001" green="0.70196078429999997" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="g3q-4b-cHU"/>
+                                    <constraint firstAttribute="width" constant="44" id="hcB-AE-VtQ"/>
+                                </constraints>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addBtnPressed:" destination="eXk-bq-y2E" eventType="touchUpInside" id="gu1-Gh-n0c"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.36078431370000003" green="0.3294117647" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="Iaj-GU-lAg" firstAttribute="bottom" secondItem="K0a-RV-gga" secondAttribute="bottom" constant="24" id="B0F-Eb-Yh7"/>
                             <constraint firstItem="Iaj-GU-lAg" firstAttribute="trailing" secondItem="WFj-Fk-7vb" secondAttribute="trailing" id="HQ2-14-WdL"/>
                             <constraint firstItem="WFj-Fk-7vb" firstAttribute="top" secondItem="Iaj-GU-lAg" secondAttribute="top" id="Ps9-6T-8Ha"/>
                             <constraint firstItem="WFj-Fk-7vb" firstAttribute="leading" secondItem="hVp-Id-yQn" secondAttribute="leading" id="UMa-Qd-OQm"/>
+                            <constraint firstItem="Iaj-GU-lAg" firstAttribute="trailing" secondItem="K0a-RV-gga" secondAttribute="trailing" constant="24" id="tWj-jJ-mOh"/>
                             <constraint firstItem="Iaj-GU-lAg" firstAttribute="bottom" secondItem="WFj-Fk-7vb" secondAttribute="bottom" id="wFb-AH-Hdz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Iaj-GU-lAg"/>

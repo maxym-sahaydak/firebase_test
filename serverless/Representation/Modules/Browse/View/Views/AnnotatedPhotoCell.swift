@@ -29,6 +29,7 @@
  */
 
 import UIKit
+import Kingfisher
 
 class AnnotatedPhotoCell: UICollectionViewCell {
   
@@ -43,15 +44,23 @@ class AnnotatedPhotoCell: UICollectionViewCell {
     containerView.layer.cornerRadius = 6
     containerView.layer.masksToBounds = true
   }
-  
-  var photo: Photo? {
-    didSet {
-      if let photo = photo {
-        imageView.image = photo.image
-//        captionLabel.text = photo.caption
-//        commentLabel.text = photo.comment
-      }
+
+    var image: CMLImage? {
+        didSet {
+            if let url = image?.thumbUrl {
+                imageView.kf.setImage(with: URL(string: url))
+            }
+        }
     }
-  }
   
+//  var photo: Photo? {
+//    didSet {
+//      if let photo = photo {
+//        imageView.image = photo.image
+////        captionLabel.text = photo.caption
+////        commentLabel.text = photo.comment
+//      }
+//    }
+//  }
+
 }
