@@ -99,7 +99,23 @@
                     <view key="view" contentMode="scaleToFill" id="zzM-xJ-Mu1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4tg-Iu-jAx">
+                                <rect key="frame" x="148.5" y="314.5" width="78" height="38"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <state key="normal" title="Log Out">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="logOutPressed:" destination="pOX-rP-Fh4" eventType="touchUpInside" id="R2k-Xw-YLe"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.1647058824" green="0.80392156859999997" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4tg-Iu-jAx" firstAttribute="centerX" secondItem="zzM-xJ-Mu1" secondAttribute="centerX" id="U1o-e2-sxi"/>
+                            <constraint firstItem="4tg-Iu-jAx" firstAttribute="centerY" secondItem="zzM-xJ-Mu1" secondAttribute="centerY" id="o6G-ds-13z"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="JpM-b4-72z"/>
                     </view>
                     <navigationItem key="navigationItem" id="OkR-Ww-2aw"/>

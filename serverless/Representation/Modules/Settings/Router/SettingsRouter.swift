@@ -9,10 +9,14 @@
 import UIKit
 
 protocol SettingsRouterProtocol {
-
+    func showLogin()
 }
 
 class SettingsRouter: BaseRouter, SettingsRouterProtocol {
 
+    func showLogin() {
+        guard let vc = vc(withType: LoginVC.self, fromStoryboard: .onboarding) else { return }
+        UIApplication.shared.keyWindow?.rootViewController = vc
+    }
 
 }

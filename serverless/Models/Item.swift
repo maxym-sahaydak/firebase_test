@@ -22,6 +22,7 @@ struct CMLImage {
     var timestamp: NSNumber?
     var width: NSNumber?
     var height: NSNumber?
+    var palette: NSDictionary?
 
     init(with dictionary: Dictionary<String, Any>) {
         url = dictionary["url"] as? String
@@ -29,7 +30,8 @@ struct CMLImage {
         thumbUrl = dictionary["thumbUrl"] as? String
         width = dictionary["width"] as? NSNumber
         height = dictionary["height"] as? NSNumber
-        timestamp = dictionary["height"] as? NSNumber
+        timestamp = dictionary["timestamp"] as? NSNumber
+        palette = dictionary["palette"] as? NSDictionary
     }
 }
 
@@ -42,7 +44,7 @@ class CMLImageForm: BaseForm {
     var height: NSNumber?
     var timestamp: NSNumber?
 
-    func params() -> [String : Any] {
+    func params() -> [String: Any] {
         var params: [String: Any] = [:]
         params[filterNil: "url"] = url
         params[filterNil: "thumbUrl"] = thumbUrl

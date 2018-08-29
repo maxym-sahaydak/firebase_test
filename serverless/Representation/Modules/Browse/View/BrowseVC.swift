@@ -64,7 +64,6 @@ extension BrowseVC: BrowseVMDelegate {
         collectionView.collectionViewLayout.invalidateLayout()
         collectionView.reloadData()
     }
-
 }
 
 extension BrowseVC: ContentPickerDelegate {
@@ -87,6 +86,11 @@ extension BrowseVC: UICollectionViewDelegate, UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel?.items?.count ?? 0
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let cmlImage = viewModel?.items?[indexPath.row] else { return }
+        router?.showImageInfo(cmlImage: cmlImage)
     }
 }
 

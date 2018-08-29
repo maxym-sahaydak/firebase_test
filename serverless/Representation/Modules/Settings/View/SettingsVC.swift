@@ -17,6 +17,13 @@ class SettingsVC : BaseVC {
         viewModel = SettingsVM(withDelegate: self)
     }
 
+    //MARK: - Actions
+
+    @IBAction func logOutPressed(_ sender: Any) {
+        viewModel?.logOut()
+    }
+
+
     // MARK: - Private
     
     private var router: SettingsRouterProtocol?
@@ -24,5 +31,9 @@ class SettingsVC : BaseVC {
 }
 
 extension SettingsVC: SettingsVMDelegate {
-	
+
+    func loggedOut() {
+        router?.showLogin()
+    }
+
 }

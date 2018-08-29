@@ -97,10 +97,9 @@ class BrowseVM: BrowseVMProtocol {
     //MARK: - Private
 
     private func subscribeToItemsUpdate() {
-        /*let databaseRef =*/ Database.database().reference().child("items")
+        Database.database().reference().child("items")
         .observe(.value) { (snapshot) in
             print("childrenCount: \(snapshot.childrenCount)")
-//            print(snapshot.children)
 
             guard let items = snapshot.value as? NSDictionary else { return }
 
@@ -133,7 +132,10 @@ class BrowseVM: BrowseVMProtocol {
         clImage.height = NSNumber(value: Float(imageSize.height))
         clImage.width = NSNumber(value: Float(imageSize.width))
 
-        databaseRef.updateChildValues(clImage.params()) { [weak self] (error, databaseRef) in
+//        databaseRef.updateChildValues(clImage.params()) { [weak self] (error, databaseRef) in
+//            self?.delegate?.spinnerControl?.hide()
+//        }
+        databaseRef.setValue(clImage.params()) { [weak self] (error, reference) in
             self?.delegate?.spinnerControl?.hide()
         }
     }
